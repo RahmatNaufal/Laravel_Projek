@@ -37,8 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route Group Admin yang diproteksi autentikasi Breeze
-// Route Buku khusus Admin
+
 Route::prefix('admin')
     ->name('admin.')
     ->middleware(['auth'])
